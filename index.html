@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercice d'application – Assertivité | TMK Performances</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 5rem;
+      line-height: 1.6;
+      background: #f9fafb;
+      color: #111827;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    header img {
+      max-width: 240px;
+      height: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #1e40af;
+      margin: 1rem 0 1.5rem;
+    }
+    .intro {
+      text-align: center;
+      color: #4b5563;
+      margin: 0 0 2.5rem;
+      font-size: 0.98rem;
+    }
+    .situation {
+      background: white;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .situation h3 {
+      margin-top: 0;
+      color: #1e40af;
+      font-size: 1.15rem;
+    }
+    .situation p {
+      margin: 0.8rem 0;
+      font-weight: 500;
+    }
+    .bold {
+      font-weight: 700;
+      color: #111;
+    }
+    table.check {
+      width: 100%;
+      max-width: 620px;
+      margin: 2.5rem auto 1.5rem;
+      border-collapse: collapse;
+    }
+    table.check th, table.check td {
+      padding: 0.9rem;
+      text-align: center;
+      border: 1px solid #d1d5db;
+    }
+    table.check th {
+      background: #eff6ff;
+      color: #1e40af;
+      font-weight: 600;
+    }
+    table.check td input[type="checkbox"] {
+      transform: scale(1.4);
+      cursor: pointer;
+    }
+    button {
+      display: block;
+      margin: 2.5rem auto;
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e3a8a;
+    }
+    #correction {
+      margin: 2rem auto;
+      max-width: 620px;
+      padding: 1.8rem 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: none;
+    }
+    #correction h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #1e40af;
+    }
+    .corr-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .corr-line:last-child {
+      border-bottom: none;
+    }
+    .num-corr {
+      font-weight: bold;
+      min-width: 40px;
+    }
+    .rep {
+      flex: 1;
+      padding: 0 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 5rem;
+      color: #6b7280;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://www.tmk-performances.com/public/assets/gifs/logo.png" alt="TMK Performances">
+</header>
+
+<h1>Exercice d'application – Assertivité</h1>
+
+<div class="intro">
+  Lisez chaque situation.<br>
+  Identifiez le(s) comportement(s) de la personne qui parle (en gras).<br>
+  Cochez une ou plusieurs cases par situation si nécessaire.
+</div>
+
+<form id="exoForm">
+
+  <div class="situation">
+    <h3>1</h3>
+    <p>« <span class="bold">J’ai l’impression que tu n’es pas à l’aise de me dire ce qui te tracasse mais peut-être pourrais-je t’aider si tu voulais m’en parler</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>2</h3>
+    <p>« <span class="bold">Vous avez oublié de remettre le bouchon de mon réservoir. Trouvez-le tout de suite sinon vous devrez m’en payer un autre</span> » (en parlant très fort)</p>
+  </div>
+
+  <div class="situation">
+    <h3>3</h3>
+    <p>« <span class="bold">Je regrette mais je suis très pressé aujourd’hui et je ne peux pas vous ramener chez vous</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>4</h3>
+    <p>Elle invente comme prétexte qu’elle doit interrompre la conversation pour préparer le repas.</p>
+  </div>
+
+  <div class="situation">
+    <h3>5</h3>
+    <p>« <span class="bold">N’en mets pas trop, ne mélange pas les couleurs et appuie sur le bon bouton. Tu sais jusqu’à quel point tu es gaffeur !</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>6</h3>
+    <p>Il frappe à répétition au plafond en criant : « <span class="bold">Taisez-vous !</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>7</h3>
+    <p>« <span class="bold">Je croyais que tu serais présent à mon anniversaire et j’ai été déçue de ne pas t’y voir. Que s’est-il donc passé ?</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>8</h3>
+    <p>« <span class="bold">Je sais que tu demeures loin et que tu es très occupée, mais après tout ce que j’ai fait pour toi, tu pourrais venir me voir plus souvent</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>9</h3>
+    <p>« <span class="bold">Non, ça me déplait souverainement d’être la secrétaire uniquement parce que je suis la seule femme du groupe</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>10</h3>
+    <p>« <span class="bold">Je veux bien faire ma part et prendre les notes cette fois-ci, mais à la prochaine réunion j’aimerais voir quelqu’un d’autre accepter cette tâche</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>11</h3>
+    <p>« <span class="bold">J’ai l’impression de travailler beaucoup plus que les autres dans notre équipe. J’aimerais discuter d’une nouvelle répartition des tâches</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>12</h3>
+    <p>« <span class="bold">Tu n’es jamais disponible quand j’ai besoin de toi. Tu es égoïste</span> »</p>
+  </div>
+
+  <div class="situation">
+    <h3>13</h3>
+    <p>Elle avale devant sa mère 50 comprimés d’aspirine (après une violente dispute).</p>
+  </div>
+
+  <div class="situation">
+    <h3>14</h3>
+    <p>« <span class="bold">Tu me prends vraiment par surprise. Je te rappelle plus tard après avoir pris le temps de digérer la nouvelle</span> »</p>
+  </div>
+
+  <table class="check">
+    <thead>
+      <tr>
+        <th></th>
+        <th>ASSERTIF</th>
+        <th>FUITE / PASSIVE</th>
+        <th>MANIPULATION</th>
+        <th>AGRESSIF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><input type="checkbox" name="q1" value="assertif"></td><td><input type="checkbox" name="q1" value="fuite"></td><td><input type="checkbox" name="q1" value="manip"></td><td><input type="checkbox" name="q1" value="agressif"></td></tr>
+      <tr><td>2</td><td><input type="checkbox" name="q2" value="assertif"></td><td><input type="checkbox" name="q2" value="fuite"></td><td><input type="checkbox" name="q2" value="manip"></td><td><input type="checkbox" name="q2" value="agressif"></td></tr>
+      <tr><td>3</td><td><input type="checkbox" name="q3" value="assertif"></td><td><input type="checkbox" name="q3" value="fuite"></td><td><input type="checkbox" name="q3" value="manip"></td><td><input type="checkbox" name="q3" value="agressif"></td></tr>
+      <tr><td>4</td><td><input type="checkbox" name="q4" value="assertif"></td><td><input type="checkbox" name="q4" value="fuite"></td><td><input type="checkbox" name="q4" value="manip"></td><td><input type="checkbox" name="q4" value="agressif"></td></tr>
+      <tr><td>5</td><td><input type="checkbox" name="q5" value="assertif"></td><td><input type="checkbox" name="q5" value="fuite"></td><td><input type="checkbox" name="q5" value="manip"></td><td><input type="checkbox" name="q5" value="agressif"></td></tr>
+      <tr><td>6</td><td><input type="checkbox" name="q6" value="assertif"></td><td><input type="checkbox" name="q6" value="fuite"></td><td><input type="checkbox" name="q6" value="manip"></td><td><input type="checkbox" name="q6" value="agressif"></td></tr>
+      <tr><td>7</td><td><input type="checkbox" name="q7" value="assertif"></td><td><input type="checkbox" name="q7" value="fuite"></td><td><input type="checkbox" name="q7" value="manip"></td><td><input type="checkbox" name="q7" value="agressif"></td></tr>
+      <tr><td>8</td><td><input type="checkbox" name="q8" value="assertif"></td><td><input type="checkbox" name="q8" value="fuite"></td><td><input type="checkbox" name="q8" value="manip"></td><td><input type="checkbox" name="q8" value="agressif"></td></tr>
+      <tr><td>9</td><td><input type="checkbox" name="q9" value="assertif"></td><td><input type="checkbox" name="q9" value="fuite"></td><td><input type="checkbox" name="q9" value="manip"></td><td><input type="checkbox" name="q9" value="agressif"></td></tr>
+      <tr><td>10</td><td><input type="checkbox" name="q10" value="assertif"></td><td><input type="checkbox" name="q10" value="fuite"></td><td><input type="checkbox" name="q10" value="manip"></td><td><input type="checkbox" name="q10" value="agressif"></td></tr>
+      <tr><td>11</td><td><input type="checkbox" name="q11" value="assertif"></td><td><input type="checkbox" name="q11" value="fuite"></td><td><input type="checkbox" name="q11" value="manip"></td><td><input type="checkbox" name="q11" value="agressif"></td></tr>
+      <tr><td>12</td><td><input type="checkbox" name="q12" value="assertif"></td><td><input type="checkbox" name="q12" value="fuite"></td><td><input type="checkbox" name="q12" value="manip"></td><td><input type="checkbox" name="q12" value="agressif"></td></tr>
+      <tr><td>13</td><td><input type="checkbox" name="q13" value="assertif"></td><td><input type="checkbox" name="q13" value="fuite"></td><td><input type="checkbox" name="q13" value="manip"></td><td><input type="checkbox" name="q13" value="agressif"></td></tr>
+      <tr><td>14</td><td><input type="checkbox" name="q14" value="assertif"></td><td><input type="checkbox" name="q14" value="fuite"></td><td><input type="checkbox" name="q14" value="manip"></td><td><input type="checkbox" name="q14" value="agressif"></td></tr>
+    </tbody>
+  </table>
+
+  <button type="button" onclick="verifierReponses()">Vérifier mes réponses</button>
+
+</form>
+
+<div id="correction">
+  <h2>Correction</h2>
+  <div id="corrContent"></div>
+</div>
+
+<footer id="footer-year">© 2025 TMK Performances</footer>
+
+<script>
+  document.getElementById('footer-year').innerHTML = `© ${new Date().getFullYear()} TMK Performances`;
+
+  const correction = [
+    { num:1, assertif:true,  fuite:false, manip:false, agressif:false },
+    { num:2, assertif:false, fuite:false, manip:false, agressif:true  },
+    { num:3, assertif:true,  fuite:false, manip:false, agressif:false },
+    { num:4, assertif:false, fuite:true,  manip:true,  agressif:false },
+    { num:5, assertif:false, fuite:false, manip:false, agressif:true  },
+    { num:6, assertif:false, fuite:false, manip:false, agressif:true  },
+    { num:7, assertif:true,  fuite:false, manip:false, agressif:false },
+    { num:8, assertif:false, fuite:false, manip:true,  agressif:false },
+    { num:9, assertif:true,  fuite:false, manip:false, agressif:false },
+    { num:10,assertif:true,  fuite:false, manip:false, agressif:false },
+    { num:11,assertif:true,  fuite:false, manip:false, agressif:false },
+    { num:12,assertif:false, fuite:false, manip:true,  agressif:true  },
+    { num:13,assertif:false, fuite:true,  manip:true,  agressif:false },
+    { num:14,assertif:true,  fuite:false, manip:false, agressif:false }
+  ];
+
+  function verifierReponses() {
+    let html = "";
+
+    correction.forEach((rep, index) => {
+      const num = index + 1;
+      let ligne = `<div class="corr-line"><span class="num-corr">${num}</span><div class="rep">`;
+
+      if (rep.assertif)  ligne += "ASSERTIF • ";
+      if (rep.fuite)     ligne += "FUITE/PASSIVE • ";
+      if (rep.manip)     ligne += "MANIPULATION • ";
+      if (rep.agressif)  ligne += "AGRESSIF";
+
+      ligne = ligne.replace(/ • $/, ""); // retire le dernier point
+      if (!rep.assertif && !rep.fuite && !rep.manip && !rep.agressif) ligne += "(aucun)";
+
+      ligne += "</div></div>";
+      html += ligne;
+    });
+
+    document.getElementById("corrContent").innerHTML = html;
+    document.getElementById("correction").style.display = "block";
+    document.getElementById("correction").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+</script>
+
+</body>
+</html>
